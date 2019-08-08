@@ -22,6 +22,19 @@ export async function userLogin(username, password) {
   })
 }
 
+export async function checkPassword(username, password) {
+  return request('/login', {
+    method: 'post',
+    requestType: 'form',
+    data: {
+      username: username,
+      password: password,
+    },
+    credentials: 'omit',
+    errorHandler: basicErrorHandler,
+  })
+}
+
 export async function currentUser() {
   return request('/auth/currentUser', {
     errorHandler: basicErrorHandler,
