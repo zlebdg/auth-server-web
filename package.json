@@ -26,11 +26,6 @@
     "test:component": "umi test ./src/components",
     "dist": "git commit -m dist && git push"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn build && git add ."
-    }
-  },
   "lint-staged": {
     "**/*.less": "stylelint --syntax less",
     "**/*.{js,jsx,tsx,ts,less,md,json}": [
