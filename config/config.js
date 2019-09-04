@@ -308,7 +308,7 @@ export default {
   // }
   // umi:
   base: '/antd/',
-  publicPath: '/antd/',
+  publicPath: 'http://px7bethft.bkt.clouddn.com/antd/',
   outputPath: 'dist/antd/',
   // //
   history: 'hash',
