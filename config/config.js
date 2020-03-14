@@ -269,23 +269,23 @@ export default {
   chainWebpack: webpackPlugin,
   proxy: {
     '/captcha': {
-      target: 'http://dev.local:20010/',
+      target: 'http://auth.loc:20010/',
       changeOrigin: true,
     },
     '/login': {
-      target: 'http://dev.local:20010/',
+      target: 'http://auth.loc:20010/',
       changeOrigin: true,
     },
     '/oauth/**': {
-      target: 'http://dev.local:20010/',
+      target: 'http://auth.loc:20010/',
       changeOrigin: true,
     },
     '/auth': {
-      target: 'http://dev.local:20010/',
+      target: 'http://auth.loc:20010/',
       changeOrigin: true,
     },
     '/test': {
-      target: 'http://dev.local:20010/',
+      target: 'http://auth.loc:20010/',
       changeOrigin: true,
     },
   },
@@ -295,7 +295,7 @@ export default {
   // 方式一
   // nginx:
   // location /antd/ {
-  //   proxy_pass http://dev.local:5000/;
+  //   proxy_pass http://auth.loc:5000/;
   // }
   // umi:
   // base: '/antd/',
@@ -304,7 +304,7 @@ export default {
   // 方式二
   // nginx:
   // location /antd/ {
-  //   proxy_pass http://dev.local:5000/antd/;
+  //   proxy_pass http://auth.loc:5000/antd/;
   // }
   // umi:
   base: '/antd/',
